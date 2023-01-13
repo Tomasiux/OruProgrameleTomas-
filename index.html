@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savaitės orai</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./config.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+<body>
+    <div class="wrapper">
+        <div class="loading hidden"></div>
+        <div class="search">
+            <form action="">
+                <input type="text" class="search__input" placeholder="Įveskite miestą">
+                <button type="sumbit" class="search__button">Pirmyn
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            </form>
+        </div>
+        <div class="result hidden">
+            <div class="container left-block">
+                <div class="main">
+                    <div class="city"></div>
+                    <div class="date"></div>
+                    <div class="icon-big"></div>
+                    <div class="temp"></div>
+                    <div class="condition"></div>
+                </div>
+                <div class="info">
+                    <div class="info__content">
+                        <div class="info__block">
+                            <div class="info__block--header">Vėjas</div>
+                            <div id="wind" class="info__block--value"></div>
+                        </div>
+                        <div class="info__block">
+                            <div class="info__block--header">Kryptis</div>
+                            <div id="deg" class="info__block--value"></div>
+                        </div>
+                        <div class="info__block">
+                            <div class="info__block--header">Drėgnumas</div>
+                            <div id="humidity" class="info__block--value"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sun">
+                    <div class="info__content">
+                        <div class="info__block">
+                            <div class="info__block--header">Saulėtekis</div>
+                            <div id="sunrise" class="info__block--value"></div>
+                        </div>
+                        <div class="info__block">
+                            <div class="info__block--header">Dienos ilgumas</div>
+                            <div id="length" class="info__block--value"></div>
+                        </div>
+                        <div class="info__block">
+                            <div class="info__block--header">Saulėlydis</div>
+                            <div id="sunset" class="info__block--value"></div>
+                        </div>
+                    </div>
+                    <div id="map"></div>
+                    <script src="script.js"></script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW8-yyVmI3VulUvR8Rb5vTRoEKuJg3toE&callback=iniciarMap"></script>
+                </div>
+            </div>
+            <div class="container right-block">
+                <div class="week">
+                    <div class="info__header">Šią savaitę</div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="week-wrapper">
+                        <div class="week-wrapper__day">
+                            <div></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__temp">
+                            <div class="day-temp"></div>
+                            <div class="night-temp"></div>
+                        </div>
+                        <div class="week-wrapper__info">
+                            <div class="icon"></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
